@@ -1,0 +1,48 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "dangovenv": {
+                "path": "/bin/zsh",
+                "args": [
+                    "-i",
+                    "-c",
+                    "source /Users/czok/Skripte/dangovenv/bin/activate && exec zsh"
+                ]
+            }
+        },
+        "terminal.integrated.defaultProfile.linux": "dangovenv",
+        "terminal.integrated.profiles.osx": {
+            "dangovenv": {
+                "path": "/bin/zsh",
+                "args": [
+                    "-i",
+                    "-c",
+                    "source /Users/czok/Skripte/dangovenv/bin/activate && exec zsh"
+                ]
+            }
+        },
+        "terminal.integrated.defaultProfile.osx": "dangovenv",
+        "tasks": {
+            "version": "2.0.0",
+            "tasks": [
+                {
+                    "label": "Terminal mit dangovenv",
+                    "type": "shell",
+                    "command": "source /Users/czok/Skripte/dangovenv/bin/activate && exec zsh",
+                    "presentation": {
+                        "echo": true,
+                        "reveal": "always",
+                        "focus": true,
+                        "panel": "new"
+                    },
+                    "problemMatcher": []
+                }
+            ]
+        }
+    }
+}
