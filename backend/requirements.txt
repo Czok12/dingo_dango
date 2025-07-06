@@ -1,0 +1,5 @@
+# Produktions-Abhängigkeiten
+fastapi
+uvicorn
+python-dotenv
+# Weitere Abhängigkeiten wie langchain, faiss-cpu, etc. werden hier später hinzugefügt

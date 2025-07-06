@@ -1,0 +1,20 @@
+{
+    "python.defaultInterpreterPath": "../dangovenv/bin/python",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.ruffEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.mypy_cache": true,
+        "**/.ruff_cache": true,
+        "**/.pytest_cache": true,
+        "**/.venv": true,
+        "**/node_modules": true
+    }
+}

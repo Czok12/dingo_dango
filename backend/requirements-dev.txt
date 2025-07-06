@@ -1,0 +1,7 @@
+# Entwicklungs-Abhängigkeiten
+pytest
+pytest-cov
+pytest-asyncio
+black
+ruff
+mypy
