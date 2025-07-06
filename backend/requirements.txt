@@ -1,5 +1,24 @@
+
 # Produktions-Abhängigkeiten
 fastapi
 uvicorn
+langchain
+faiss-cpu
+sentence-transformers
 python-dotenv
-# Weitere Abhängigkeiten wie langchain, faiss-cpu, etc. werden hier später hinzugefügt
+# Produktions-Abhängigkeiten
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+
+# LangChain & Vektordatenbank
+langchain
+langchain-community
+langchain-core
+langchain-ollama
+sentence-transformers
+faiss-cpu
+
+# Hilfsbibliotheken
+numpy

@@ -1,0 +1,96 @@
+{
+    // Definiert die Ordner, die im VS Code Explorer angezeigt werden.
+    "folders": [
+        {
+            "name": "🚀 Backend (Python)",
+            "path": "backend"
+        },
+        {
+            "name": "🖥️ Frontend (Tauri/TS)",
+            "path": "frontend"
+        },
+        {
+            "name": "📚 Dokumentation",
+            "path": "docs"
+        }
+    ],
+    // Workspace-spezifische Einstellungen, die die User-Einstellungen überschreiben.
+    "settings": {
+        // Versteckt störende Ordner im Explorer für eine bessere Übersicht.
+        "files.exclude": {
+            "**/__pycache__": true,
+            "**/.venv": true,
+            "**/.pytest_cache": true,
+            "**/.mypy_cache": true,
+            "**/node_modules": true,
+            "**/dist": true,
+            "**/target": true, // Versteckt den Rust-Build-Ordner von Tauri
+            "**/.vscode": true
+        },
+        "search.exclude": {
+            "**/__pycache__": true,
+            "**/.venv": true,
+            "**/node_modules": true,
+            "**/target": true
+        },
+        // --- Python-spezifische Einstellungen ---
+        // Diese gelten nur für Dateien im "backend"-Ordner.
+        "[python]": {
+            // Setzt Black als Standard-Formatierer.
+            "editor.defaultFormatter": "ms-python.black-formatter",
+            // Formatiert den Code automatisch beim Speichern.
+            "editor.formatOnSave": true,
+            // Führt Code-Aktionen (Linting-Fixes) beim Speichern aus.
+            "editor.codeActionsOnSave": {
+                // Führt Ruff aus, um den Code automatisch zu korrigieren und zu linten.
+                "source.fixAll.ruff": "explicit",
+                // Sortiert Importe automatisch.
+                "source.organizeImports": "explicit"
+            }
+        },
+        // Konfiguration für Mypy, um strikte Typüberprüfung zu aktivieren.
+        "mypy-type-checker.args": [
+            "--strict"
+        ],
+        // --- TypeScript/React-spezifische Einstellungen ---
+        // Diese gelten nur für Dateien im "frontend"-Ordner.
+        "[typescript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+        },
+        "[typescriptreact]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+        },
+        "[json]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+        },
+        "[markdown]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+        },
+        // Führt ESLint-Fixes beim Speichern aus.
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    // Empfiehlt wichtige Erweiterungen für jeden, der das Projekt öffnet.
+    "extensions": {
+        "recommendations": [
+            // Python
+            "ms-python.python", // Offizielle Python-Erweiterung
+            "ms-python.black-formatter", // Black-Formatierer
+            "charliermarsh.ruff", // Ruff Linter
+            "ms-python.mypy-type-checker", // Mypy Typprüfer
+            // Frontend & Tauri
+            "tauri-apps.tauri-vscode", // Offizielle Tauri-Erweiterung
+            "rust-lang.rust-analyzer", // Rust-Unterstützung (für Tauri-Kern)
+            "esbenp.prettier-vscode", // Prettier-Formatierer
+            "dbaeumer.vscode-eslint", // ESLint
+            // Allgemeine Hilfsprogramme
+            "streetsidesoftware.code-spell-checker", // Rechtschreibprüfung
+            "yzhang.markdown-all-in-one" // Bessere Markdown-Bearbeitung
+        ]
+    }
+}

@@ -1,12 +1,18 @@
 [tool.black]
+
 line-length = 88
+target-version = ['py39']
 
 [tool.ruff]
 line-length = 88
-select = ["E", "W", "F", "I", "C", "B"] # Standard-Regeln + flake8-bugbear etc.
-ignore = ["E501"] # wird von Black gehandhabt
+select = ["E", "F", "W", "C90", "I", "N", "D", "UP", "B", "A", "C4", "DTZ", "PIE", "PT", "Q", "RET", "SIM", "T20", "TID", "TRY", "YTT"]
+ignore = []
 
 [tool.mypy]
-python_version = "3.10"
-warn_return_any = true
-warn_unused_configs = true
+python_version = "3.9"
+ignore_missing_imports = true
+strict = true
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
